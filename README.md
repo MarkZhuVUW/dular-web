@@ -2,7 +2,7 @@
 
 [![Build and deploy to github pages](https://github.com/dular-xyz/dular-web/actions/workflows/deploy-gh-pages.yml/badge.svg)](https://github.com/dular-xyz/dular-web/actions/workflows/deploy-gh-pages.yml)
 
-[Dular.XYZ](dular.xyz) is a double-entry bookkeeping web application based on [React](https://reactjs.org/) and [Material-UI](https://material-ui.com/).
+[Dular.xyz](https://www.dular.xyz/) is a double-entry bookkeeping web application based on [React](https://reactjs.org/) and [Material-UI](https://material-ui.com/).
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - Typescript: `^4.1.2`.
