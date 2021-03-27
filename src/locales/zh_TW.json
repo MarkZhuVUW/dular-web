@@ -1,0 +1,12 @@
+{
+  "en_US": "英文 (English)",
+  "zh_CN": "簡體中文 (简体中文)",
+  "zh_TW": "繁體中文",
+  "app_name": "哆啦記賬",
+  "account": "帳戶",
+  "debug": "調試模式",
+  "local_storage_data": "本地存儲數據",
+  "key": "鍵",
+  "value": "值",
+  "locale_data": "多語言數據"
+}
