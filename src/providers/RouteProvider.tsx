@@ -2,7 +2,7 @@ import { FC, ComponentType } from "react";
 import {
   Switch,
   Route,
-  BrowserRouter,
+  HashRouter,
   useRouteMatch,
   useParams,
   useHistory,
@@ -51,9 +51,9 @@ const RouteProviderContent: FC = ({ children }) => {
 };
 
 export const RouteProvider: FC = ({ children }) => (
-  <BrowserRouter>
+  <HashRouter>
     <RouteProviderContent>{children}</RouteProviderContent>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export const withRoute = <PropsType extends object>(
