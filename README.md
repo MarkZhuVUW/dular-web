@@ -1,6 +1,6 @@
-# Dular.IO
+# Dular Web
 
-[Dular.IO](dular.io) is a double-entry bookkeeping web application based on [React](https://reactjs.org/) and [Material-UI](https://material-ui.com/).
+[Dular.XYZ](dular.xyz) is a double-entry bookkeeping web application based on [React](https://reactjs.org/) and [Material-UI](https://material-ui.com/).
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - Typescript: `^4.1.2`.
