@@ -1,4 +1,4 @@
-import { Element, useState } from "react";
+import { ReactElement, useState } from "react";
 import styled from "@emotion/styled";
 import { useRoute } from "contexts/RouteContext";
 import List from "@material-ui/core/List";
@@ -12,7 +12,7 @@ import Drawer from "@material-ui/core/Drawer";
 
 export type MenuItemType = {
   path: string;
-  icon?: Element;
+  icon?: ReactElement;
   title: string;
   onClick?: () => void;
   children?: Array<MenuItemType>;
