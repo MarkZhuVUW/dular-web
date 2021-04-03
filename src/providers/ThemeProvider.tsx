@@ -1,9 +1,10 @@
 import { FC, useState, ComponentType } from "react";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import { Theme, ThemeContext } from "../contexts/ThemeContext";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { Theme, ThemeContext } from "../contexts/ThemeContext";
 import { useLocalStorage } from "../contexts/LocalStorageContext";
+import LocalStorageKeys from "../constants/LocalStorageKeys";
 
 import muiThemeDark from "../themes/Dark";
 import muiThemeLight from "../themes/Light";
@@ -14,11 +15,14 @@ export const ThemeProvider: FC = ({ children }) => {
   const { getItemOrDefault, setItem } = useLocalStorage();
 
   const [theme, setThemeState] = useState(
-    getItemOrDefault("theme", prefersDarkMode ? Theme.Dark : Theme.Light)
+    getItemOrDefault(
+      LocalStorageKeys.THEME,
+      prefersDarkMode ? Theme.Dark : Theme.Light
+    )
   );
 
   const setTheme = (theme: Theme) => {
-    setItem("theme", theme);
+    setItem(LocalStorageKeys.THEME, theme);
     setThemeState(theme);
   };
 

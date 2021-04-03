@@ -1,6 +1,7 @@
 import { useState, FC, ComponentType } from "react";
 import { Locale, LocaleContext } from "../contexts/LocaleContext";
 import { useLocalStorage } from "../contexts/LocalStorageContext";
+import LocalStorageKeys from "../constants/LocalStorageKeys";
 
 import enUS from "../locales/en_US.json";
 import zhCN from "../locales/zh_CN.json";
@@ -16,11 +17,11 @@ export const LocaleProvider: FC = ({ children }) => {
   const { getItemOrDefault, setItem } = useLocalStorage();
 
   const [locale, setLocaleState] = useState(
-    getItemOrDefault("locale", Locale.enUS)
+    getItemOrDefault(LocalStorageKeys.LOCALE, Locale.enUS)
   );
 
   const setLocale = (locale: Locale) => {
-    setItem("locale", locale);
+    setItem(LocalStorageKeys.LOCALE, locale);
     setLocaleState(locale);
   };
 

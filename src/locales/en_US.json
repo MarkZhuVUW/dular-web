@@ -8,5 +8,6 @@
   "local_storage_data": "Local storage data",
   "key": "key",
   "value": "value",
-  "locale_data": "Locale data"
+  "locale_data": "Locale data",
+  "access_token": "Access token"
 }

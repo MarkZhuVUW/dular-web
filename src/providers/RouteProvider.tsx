@@ -11,6 +11,8 @@ import { RouteContext, IRouteComponent } from "../contexts/RouteContext";
 import { join } from "path";
 
 const RouteProviderContent: FC = ({ children }) => {
+  const current = () => window.location.hash.replace(/^#/, "");
+
   const makeRoutes = (routes: { [key: string]: IRouteComponent }) => {
     const { url } = useRouteMatch();
 
@@ -44,7 +46,7 @@ const RouteProviderContent: FC = ({ children }) => {
   };
 
   return (
-    <RouteContext.Provider value={{ makeRoutes, redirect }}>
+    <RouteContext.Provider value={{ current, makeRoutes, redirect }}>
       {children}
     </RouteContext.Provider>
   );

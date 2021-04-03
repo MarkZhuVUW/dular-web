@@ -8,5 +8,6 @@
   "local_storage_data": "本地存儲數據",
   "key": "鍵",
   "value": "值",
-  "locale_data": "多語言數據"
+  "locale_data": "多語言數據",
+  "access_token": "訪問令牌"
 }

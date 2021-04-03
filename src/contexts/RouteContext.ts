@@ -9,6 +9,7 @@ export interface IRouteComponent {
 }
 
 export type RouteContextType = {
+  current: () => string;
   makeRoutes: (routes: {
     [key: string]: IRouteComponent;
   }) => ReactElement | null;
@@ -16,6 +17,9 @@ export type RouteContextType = {
 };
 
 export const RouteContext = createContext<RouteContextType>({
+  current: () => {
+    return window.location.hash.replace(/^#/, "");
+  },
   makeRoutes: (routes: { [key: string]: IRouteComponent }) => {
     console.warn(`Failed to make routes, no route provider`);
     console.debug("routes", routes);
